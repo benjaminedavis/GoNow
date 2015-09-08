@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="main.css">
+  </head>
+  <body>
+
+    <nav class="nav navbar navbar-inverse navbar-fixed-top">
+      <div id="goseenow" class="container">
+        <div class="col-sm-4">
+          <li><a id="goseenowlink" class="navbar-brand navbar-left" href="#">GO</a></li>
+        </div>
+        <div class="col-sm-4">
+          <li><a id="goseenowlink" class="navbar-brand navbar-center" href="#">SEE</a></li>
+        </div>
+        <div class="col-sm-4">
+          <li><a id="goseenowlink" class="navbar-brand navbar-right" presentation="active" href="#">NOW</a></li>
+        </div>
+      </div>
+    </nav>
+
+    <div id="map"></div>
+
+    <script type="text/javascript">
+    function initMap() {
+    // Specify features and elements to define styles.
+    var styleArray = [
+      {
+          "elementType": "labels.text.stroke",
+          "stylers": [
+              {
+                  "visibility": "off"
+              }
+          ]
+      },
+      {
+          "featureType": "poi.business",
+          "elementType": "labels.text",
+          "stylers": [
+              {
+                  "visibility": "off"
+              }
+          ]
+      },
+      {
+          "featureType": "poi.business",
+          "elementType": "labels.icon",
+          "stylers": [
+              {
+                  "visibility": "off"
+              }
+          ]
+      },
+      {
+          "featureType": "poi.place_of_worship",
+          "elementType": "labels.text",
+          "stylers": [
+              {
+                  "visibility": "off"
+              }
+          ]
+      },
+      {
+          "featureType": "poi.place_of_worship",
+          "elementType": "labels.icon",
+          "stylers": [
+              {
+                  "visibility": "off"
+              }
+          ]
+      },
+    {
+      "featureType": "landscape.natural",
+      "elementType": "geometry.fill",
+      "stylers": [
+          {
+              "visibility": "on"
+          },
+          {
+              "color": "#e0efef"
+          }
+      ]
+    },
+    {
+      "featureType": "poi",
+      "elementType": "geometry.fill",
+      "stylers": [
+          {
+              "visibility": "on"
+          },
+          {
+              "hue": "#1900ff"
+          },
+          {
+              "color": "#c0e8e8"
+          }
+      ]
+    },
+    {
+      "featureType": "road",
+      "elementType": "geometry",
+      "stylers": [
+          {
+              "lightness": 100
+          },
+          {
+              "visibility": "simplified"
+          }
+      ]
+    },
+    {
+      "featureType": "road",
+      "elementType": "labels",
+      "stylers": [
+          {
+              "visibility": "off"
+          }
+      ]
+    },
+    {
+      "featureType": "transit.line",
+      "elementType": "geometry",
+      "stylers": [
+          {
+              "visibility": "on"
+          },
+          {
+              "lightness": 700
+          }
+      ]
+    },
+    {
+      "featureType": "water",
+      "elementType": "all",
+      "stylers": [
+          {
+              "color": "#7dcdcd"
+          }
+      ]
+    }
+    ]
+
+    // Create a map object and specify the DOM element for display.
+    var map = new google.maps.Map(document.getElementById('map'), {
+      center: {lat: 34.014, lng: 241.505},
+      scrollwheel: false,
+      // Apply the map style array to the map.
+      styles: styleArray,
+      zoom: 16
+    });
+    }
+  </script>
+  <script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6_UXJEV3ImGTs2Se-Zs5ifICmEc-5ryA&callback=initMap">
+  </script>
+
+  </body>
+</html>

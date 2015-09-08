@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="main.css"/>
+
+  </head>
+  <body>
+
+  <nav class="nav navbar navbar-fixed-top">
+    <ul class="nav nav-tabs">
+      <li class="active"><a id="goseenowlink2" href="#gohome" data-toggle="tab" aria-expanded="true">GO</a></li>
+      <li class=""><a id="goseenowlink2" href="#see" data-toggle="tab" aria-expanded="false">SEE</a></li>
+      <li class=""><a id="goseenowlink2" href="#now" data-toggle="tab" aria-expanded="false">NOW</a></li>
+    </ul>
+  </nav>
+
+<div id="myTabContent" class="tab-content">
+  <div class="tab-pane fade active in" id="gohome"></div>
+  <div class="tab-pane fade" id="see"></div>
+  <div class="tab-pane fade" id="now"></div>
+</div>
+
+    <div id="map"></div>
+
+    <nav class="navbar navbar-default navbar-fixed-bottom">
+      <div id="footer-text" class="container">
+          <div id="copyright" class="text-center">
+            <p>copyright &#169 2015 <a href="#">go see now</a></p>
+          </div>
+      </div>
+    </nav>
+
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6_UXJEV3ImGTs2Se-Zs5ifICmEc-5ryA&callback=initMap">
+  </script>
+  <script src="mapscript1.js"></script>
+
+  </body>
+</html>

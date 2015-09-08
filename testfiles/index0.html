@@ -1,0 +1,65 @@
+<!--Google Styled Map sample  -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <style type="text/css">
+      html, body { height: 100%; margin: 20; padding: 0; }
+      #map { height: 100%; }
+    </style>
+  </head>
+  <title>Google Styled Sample</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="main.css"/>
+  <body>
+
+    <nav class="nav navbar navbar-default navbar-inverse navbar-fixed-top">
+      <div id="goseenow" class="container">
+        <li><a id="goseenowlink" class="navbar-brand navbar-left" href="index0.html"> GO </a></li>
+        <li><a id="goseenowlink" class="navbar-brand navbar-center" href="index5.html"> SEE </a></li>
+        <li><a id="goseenowlink" class="navbar-brand navbar-right" href="index6.html"> NOW </a></li>
+      </div>
+    </nav>
+
+    <div id="map"></div>
+    <script type="text/javascript">
+
+    function initMap() {
+      // Specify features and elements to define styles.
+      var styleArray = [
+        {
+          featureType: "all",
+          stylers: [
+           { saturation: -80 }
+          ]
+        },{
+          featureType: "road.arterial",
+          elementType: "geometry",
+          stylers: [
+            { hue: "#00ffee" },
+            { saturation: 100 }
+          ]
+        },{
+          featureType: "poi.business",
+          elementType: "labels",
+          stylers: [
+            { visibility: "off" }
+          ]
+        }
+      ];
+
+      // Create a map object and specify the DOM element for display.
+      var map = new google.maps.Map(document.getElementById('map'), {
+        center: {lat: 34.014, lng: 241.505},
+        scrollwheel: false,
+        // Apply the map style array to the map.
+        styles: styleArray,
+        zoom: 16
+      });
+    }
+
+    </script>
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6_UXJEV3ImGTs2Se-Zs5ifICmEc-5ryA&callback=initMap">
+    </script>
+  </body>
+</html>
