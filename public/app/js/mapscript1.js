@@ -110,7 +110,7 @@ if (navigator.geolocation) {
       };
 
       infoWindow.setPosition(pos);
-      infoWindow.setContent('Your Location.');
+      infoWindow.setContent('You!');
       map.setCenter(pos);
     }, function() {
       handleLocationError(true, infoWindow, map.getCenter());
